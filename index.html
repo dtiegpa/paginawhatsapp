@@ -1,22 +1,64 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="scroll-smooth" >
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Links Importantes</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Páginas EGPA</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+
+  <style>
+    /* Tema escuro e claro automático */
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #1f2937; /* bg-gray-800 */
+        color: #d1d5db; /* text-gray-300 */
+      }
+      .card {
+        background-color: #374151; /* bg-gray-700 */
+        box-shadow: 0 10px 15px -3px rgb(55 65 81 / 0.4), 0 4px 6px -4px rgb(55 65 81 / 0.4);
+      }
+      a.button {
+        background-color: #2563eb; /* blue-600 */
+        color: white;
+      }
+      a.button:hover {
+        background-color: #1e40af; /* blue-900 */
+      }
+      p.update {
+        color: #9ca3af; /* text-gray-400 */
+      }
+    }
+
+    /* Animação e transição para botões */
+    a.button {
+      transition: background-color 0.3s ease, transform 0.1s ease;
+      will-change: transform;
+      user-select: none;
+    }
+    a.button:active {
+      transform: scale(0.95);
+      transition: transform 0.1s ease;
+    }
+    a.button:focus-visible {
+      outline: 3px solid #93c5fd; /* azul claro para foco */
+      outline-offset: 2px;
+    }
+  </style>
 </head>
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
-  <div class="bg-white p-8 rounded-xl shadow-lg max-w-md w-full text-center">
-    <h1 class="text-2xl font-bold text-gray-800 mb-6">Links Importantes</h1>
-    
-    <div class="space-y-4">
-      <a href="https://exemplo1.com" target="_blank" class="block w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition">Acesso ao Sistema</a>
-      <a href="https://exemplo2.com" target="_blank" class="block w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition">Documentos</a>
-      <a href="https://exemplo3.com" target="_blank" class="block w-full bg-yellow-500 text-white py-3 rounded-lg hover:bg-yellow-600 transition">Suporte Técnico</a>
+<body class="bg-gray-100 text-gray-800">
+  <div class="min-h-screen flex flex-col justify-center items-center p-4">
+    <div class="card w-full max-w-sm rounded-xl shadow-md p-6 bg-white">
+      <h1 class="text-xl font-bold text-center mb-6">📄 Páginas EGPA</h1>
+
+      <div class="space-y-3">
+        <a href="https://dtiegpa.github.io/estagio/" target="_blank" rel="noopener" class="button block text-center bg-blue-700 text-white py-3 rounded-md hover:bg-blue-800">Estágio</a>
+        <a href="https://dtiegpa.github.io/parceirosdescontai/" target="_blank" rel="noopener" class="button block text-center bg-blue-700 text-white py-3 rounded-md hover:bg-blue-800">Desconto Servidor</a>
+        <a href="https://ananindeua.pa.gov.br/inovacao" target="_blank" rel="noopener" class="button block text-center bg-blue-700 text-white py-3 rounded-md hover:bg-blue-800">III Evento Inovação</a>
+        <a href="https://dtiegpa.github.io/certificacoes/" target="_blank" rel="noopener" class="button block text-center bg-blue-700 text-white py-3 rounded-md hover:bg-blue-800">Credenciamento & Certificações</a>
+       </div>
+
+      <p class="update text-xs text-gray-400 text-center mt-6">Última atualização: jun/2025</p>
     </div>
-    
-    <p class="text-sm text-gray-400 mt-6">Atualizado em junho de 2025</p>
   </div>
 </body>
 </html>
